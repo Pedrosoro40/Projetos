@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <form action="calculadora.php" method="post">
+            <label for="num1">Número 1:</label>
+            <input type="number" name="num1" id="num1" required>
+            <br>
+            <label for="num2"></label>/label>
+            <input type="number" name="num2" id="num2" required>
+            <br>
+            <label for="operacao">Operação:</label>
+            <select name="operacao" id="operacao">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <br>
+            <input type="submit" value="Calcular">
+            </form>
+        <div>
+            <h2>Resultado:</h2>
+            <p>
+                <?php
+                if (isset($_POST['num1']) && isset($_POST['num2']) && isset($_POST['operacao'])) {
+                    $num1 = $_POST['num1'];
+                    $num2 = $_POST['num2'];
+                    $operacao = $_POST['operacao'];
+
+                    switch ($operacao) {
+                        case '+':
+                            $resultado = $num1 + $num2;
+                            break;
+                        case '-':
+                            $resultado = $num1 - $num2;
+                            break;
+                        case '*':
+                            $resultado = $num1 * $num2;
+                            break;
+                        case '/':
+                            if ($num2 != 0) {
+                                $resultado = $num1 / $num2;
+                            } else {
+                                echo "Divisão por zero não é permitida.";
+                                exit();
+                            }
+                            break;
+                        default:
+                            echo "Operação inválida.";
+                            exit();
+                    }
+                    echo "O resultado de {$num1} {$operacao} {$num2} é: {$resultado}";
+                }
+                ?>
+                </p>
+                </div>
+        <div>
+            <h2>Calculadora de potência</h2>
+            <form action="potencia.php" method="post">
+                <label for="base">Base:</label>
+                <input type="number" name="base" id="base" required>
+                <br>
+                <label for="expoente"></label>/label>
+                <input type="number" name="expoente" id="expoente" required>
+                <br>
+                <input type="submit" value="Calcular">
+                </form>
+            <div>
+                <h2>Resultado:</h2>
+                <p>
+                    <?php
+                    if (isset($_POST['base']) && isset($_POST['expoente'])) {
+                        $base = $_POST['base'];
+                        $expoente = $_POST['expoente'];
+
+                        $resultado = pow($base, $expoente);
+                        echo "O resultado de {$base} elevado a {$expoente} é: {$resultado}";
+                    }
+                    ?>
+                </p>
+                </div>
+
+    </div>
+</body>
+</html>
