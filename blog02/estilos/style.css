@@ -1,0 +1,130 @@
+@charset 'UTF-8';
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+h1, h2, h3 {
+    color: #333;
+}
+p {
+    line-height: 1.6;
+    color: #555;
+}
+/* Estilos del encabezado */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+/* Estilos de la navegación */
+nav {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Estilos del contenido */
+main {
+    padding: 20px;
+    background: #ffffff;
+    margin: 20px auto;
+    max-width: 800px;
+}
+/* Estilos de los artículos */
+article {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+article h2 {
+    margin-top: 0;
+}
+/* Estilos del pie de página */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+/* Estilos de los enlaces */
+a {
+    color: #35424a;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Estilos de las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Estilos de los formularios */
+form {
+    margin: 20px 0;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form input[type="submit"] {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background: #333;
+}
+/* Estilos de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+table th {
+    background: #35424a;
+    color: #ffffff;
+}
+table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+/* Estilos de los botones */
+button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
