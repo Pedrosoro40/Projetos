@@ -1,5 +1,20 @@
 @charset 'utf-8';
 
-label {
+label, input[type="text"], input[type="submit"],textarea{
+    
   display: block;
+}
+textarea{
+  width: 300px;
+  height: 80px;
+}
+input[type="submit"]{
+  background: #333333;
+    color: #ffffff;
+    cursor: pointer;
+    padding:  10px 20px;
+    border: none;
+}
+input[type="submit"]:hover{
+  background: #555555;
 }
