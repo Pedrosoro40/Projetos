@@ -2,7 +2,15 @@
 
 body{
   font-family: "Roboto", sans-serif;
+  color: #333;
   
+}
+a:link, a:active, a:visited{
+    color: #315e8a;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 /* 960px */
 .linha{
@@ -50,4 +58,28 @@ body{
 }
 .col12{
     width: 940px;
+}
+/* estilos reutilizaveis */
+.sem-padding{
+    padding: 0 !important;
+}
+.sem-maegun{
+    margin: 0 !important;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    margin: 15px 0 10px 0;
+}
+ul li, ol li{
+    margin-bottom: 5px;
+}
+ul.inline li, ol.inline li{
+    display: inline;
+    margin-right: 15px;
+}
+ul.inline li:last-child, ol.inline li:last-child{
+    margin-right: 0;
+}
+ul.sem-marcador, ol.sem-marcador{
+    list-style: none;
 }
